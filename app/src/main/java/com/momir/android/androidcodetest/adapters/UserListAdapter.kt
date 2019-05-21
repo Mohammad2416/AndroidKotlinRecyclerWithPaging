@@ -11,7 +11,7 @@ import com.momir.android.androidcodetest.dataModel.User
 import com.momir.android.androidcodetest.interfaces.OnItemClickListener
 import com.momir.android.androidcodetest.network.State
 
-class UserListAdapter(private val listener : OnItemClickListener, private val retry: () -> Unit/*, var clickListener: ((User) -> Unit)*/) : PagedListAdapter<User, RecyclerView.ViewHolder>(NewsDiffCallback) {
+class UserListAdapter(private val listener : OnItemClickListener, private val retry: () -> Unit) : PagedListAdapter<User, RecyclerView.ViewHolder>(NewsDiffCallback) {
 
     private val DATA_VIEW_TYPE = 1
     private val FOOTER_VIEW_TYPE = 2
