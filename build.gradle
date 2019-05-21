@@ -1,0 +1,75 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.31'
+    ext.anko_version = '0.10.7'
+
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = 28
+    targetSdkVersion = 28
+    minSdkVersion = 21
+    supportLibVer = '28.0.0'
+    constraintLayoutVer = '1.1.3'
+    jUnitVer = '4.12'
+    testRunnerVer = '1.0.2'
+    espressoCoreVer = '3.0.2'
+    gsonVar = '2.8.5'
+    retrofit2ConverterGsonVer = '2.3.0'
+    rxjavaVar = '2.2.2'
+    rxAndroidVar = '2.1.0'
+    adapterRxjavaVar = '2.1.0'
+    retrofitVar = '2.4.0'
+
+    support =[
+            cardView     : "com.android.support:cardview-v7:${supportLibVer}",
+            recyclerView : "com.android.support:recyclerview-v7:${supportLibVer}",
+            appcompat    : "com.android.support:appcompat-v7:${supportLibVer}",
+            constraintLayout : "com.android.support.constraint:constraint-layout:${constraintLayoutVer}"
+
+    ]
+
+    gson = [
+            gson : "com.google.code.gson:gson:${gsonVar}",
+            retrofit2ConverterGson : "com.squareup.retrofit2:converter-gson:${retrofit2ConverterGsonVer}"
+    ]
+
+
+    rx = [
+            rxjava    : "io.reactivex.rxjava2:rxjava:${rxjavaVar}",
+            rxAndroid : "io.reactivex.rxjava2:rxandroid:${rxAndroidVar}",
+            adapterRxjava : "com.squareup.retrofit2:adapter-rxjava:${adapterRxjavaVar}"
+    ]
+
+    retrofit =[
+            retrofit : "com.squareup.retrofit2:retrofit:${retrofitVar}",
+            converterGson : "com.squareup.retrofit2:converter-gson:${retrofitVar}",
+            adapterRxjava2 : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVar}"
+            ]
+
+}

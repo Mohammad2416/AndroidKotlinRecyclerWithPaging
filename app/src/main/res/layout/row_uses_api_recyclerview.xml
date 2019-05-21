@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:background="#f0f0f0">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="3dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:layout_margin="4dp">
+
+            <TextView
+                    android:id="@+id/row_users_api_recycler_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Hi Dear"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+            />
+
+            <TextView
+                    android:id="@+id/row_users_api_recycler_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="2010mmm"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/row_users_api_recycler_name"
+            />
+
+            <TextView
+                    android:id="@+id/row_users_api_recycler_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="sss@sss.com"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/row_users_api_recycler_username"
+            />
+
+            <ImageView android:layout_width="46dp"
+                       android:layout_height="46dp"
+                       android:id="@+id/map_image"
+                       android:src="@drawable/ic_map_black"
+                       android:layout_centerVertical="true"
+                       android:layout_alignParentEnd="true"
+            />
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Map"
+                      android:textSize="20sp"
+                      android:textStyle="bold"
+                      android:layout_below="@+id/map_image"
+                      android:layout_alignParentEnd="true"
+                      android:layout_marginTop="8dp"
+            />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
